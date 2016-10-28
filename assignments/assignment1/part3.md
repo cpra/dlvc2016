@@ -1,9 +1,9 @@
 
 # Deep Learning VU - Assignment 1 - Part 3 #
 
-The first assignment allows you to become familiar with basic dataset handling, image processing, and machine learning. Please read the [general information](https://owncloud.tuwien.ac.at/index.php/s/tejPFjV5uz39rBL) before you start.
+The first assignment allows you to become familiar with basic dataset handling, image processing, and machine learning. Please read the [general information](https://github.com/cpra/dlvc2016/blob/master/assignments/general.md) before you start.
 
-This part builds upon [Assignment 1 - Part 2](https://owncloud.tuwien.ac.at/index.php/s/lEvW1FvO5cuvCSY), which must be finished first.
+This part builds upon [Assignment 1 - Part 2](https://github.com/cpra/dlvc2016/blob/master/assignments/assignment1/part2.md), which must be finished first.
 
 -----
 
@@ -86,7 +86,7 @@ The results show that adding a feature extraction step leads to significant perf
 
 -----
 
-Write a report that summarizes assignment 1. See [general information](https://owncloud.tuwien.ac.at/index.php/s/tejPFjV5uz39rBL) for requirements. The overall structure and contents of the report must be as follows:
+Write a report that summarizes assignment 1. See [general information](https://github.com/cpra/dlvc2016/blob/master/assignments/general.md) for requirements. The overall structure and contents of the report must be as follows:
 
 1. **Image Classification.** Describe the image classification problem.
 2. **The CIFAR10 Dataset.** Describe the CIFAR10 dataset.
@@ -99,4 +99,4 @@ The report should be 3 to 5 pages long.
 
 -----
 
-[Submit](https://owncloud.tuwien.ac.at/index.php/s/tejPFjV5uz39rBL) assignment 1, including all three parts. The **deadline is Sun, 6.11., 23:00**.
+[Submit](https://github.com/cpra/dlvc2016/blob/master/assignments/general.md) assignment 1, including all three parts. The **deadline is Sun, 6.11., 23:00**.

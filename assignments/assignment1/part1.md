@@ -1,7 +1,7 @@
 
 # Deep Learning VU - Assignment 1 - Part 1 #
 
-The first assignment allows you to become familiar with basic dataset handling, image processing, and machine learning. Please read the [general information](https://owncloud.tuwien.ac.at/index.php/s/tejPFjV5uz39rBL) before you start.
+The first assignment allows you to become familiar with basic dataset handling, image processing, and machine learning. Please read the [general information](https://github.com/cpra/dlvc2016/blob/master/assignments/general.md) before you start.
 
 -----
 

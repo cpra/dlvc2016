@@ -1,9 +1,9 @@
 
 # Deep Learning VU - Assignment 1 - Part 2 #
 
-The first assignment allows you to become familiar with basic dataset handling, image processing, and machine learning. Please read the [general information](https://owncloud.tuwien.ac.at/index.php/s/tejPFjV5uz39rBL) before you start.
+The first assignment allows you to become familiar with basic dataset handling, image processing, and machine learning. Please read the [general information](https://github.com/cpra/dlvc2016/blob/master/assignments/general.md) before you start.
 
-This part builds upon [Assignment 1 - Part 1](https://owncloud.tuwien.ac.at/index.php/s/K6kta76H8hvIGoo), which must be finished first.
+This part builds upon [Assignment 1 - Part 1](https://github.com/cpra/dlvc2016/blob/master/assignments/assignment1/part1.md), which must be finished first.
 
 -----
 
@@ -38,7 +38,7 @@ class FeatureVectorDataset:
         # Throws an error if the sample does not exist.
 ```
 
-The `FeatureVectorDataset` behaves exactly like `ImageDataset` but the samples returned are feature vectors instead of images. Use a vector or matrix type provided by the chosen image library for representing feature vectors (see [general information](https://owncloud.tuwien.ac.at/index.php/s/tejPFjV5uz39rBL)).
+The `FeatureVectorDataset` behaves exactly like `ImageDataset` but the samples returned are feature vectors instead of images. Use a vector or matrix type provided by the chosen image library for representing feature vectors (see [general information](https://github.com/cpra/dlvc2016/blob/master/assignments/general.md)).
 
 The wrapper must have the following name and interface:
 

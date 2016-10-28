@@ -15,7 +15,7 @@ The password for logging in was sent to you via email. If you have not received 
 
 ## Your Home Directory ##
 
-After logging in, you are inside your home directory. This is your private space, only you can access this directory. Inside your directory there is a `groupX/` folder, with `X` being your [group ID](https://owncloud.tuwien.ac.at/index.php/s/fu7q9EMmwMu3DMg). If you are in a group of two, you can use this folder to share data with your colleague. The main purpose of this directory is for handing in assignments. See the [general information](https://owncloud.tuwien.ac.at/index.php/s/tejPFjV5uz39rBL) for details. Do not delete the `groupX/` directory or the `submissions/` subdirectory.
+After logging in, you are inside your home directory. This is your private space, only you can access this directory. Inside your directory there is a `groupX/` folder, with `X` being your [group ID](https://github.com/cpra/dlvc2016/blob/master/assignments/groups.md). If you are in a group of two, you can use this folder to share data with your colleague. The main purpose of this directory is for handing in assignments. See the [general information](https://github.com/cpra/dlvc2016/blob/master/assignments/general.md) for details. Do not delete the `groupX/` directory or the `submissions/` subdirectory.
 
 You can upload and download data using `scp` or an SFTP GUI like [filezilla](https://filezilla-project.org/). Please do not upload datasets. All datasets required are available inside the `datasets/` folder. See the Dataset section.
 

@@ -70,7 +70,7 @@ Again, the purpose of the report is to summarize a given assignment in a way tha
 
 Submissions must be handed in fully, not in parts. Every submission must include the code for all parts of that submission, as well as a written report in PDF format.
 
-Assignments are submitted via our Deep Learning server. See [this text](https://owncloud.tuwien.ac.at/index.php/s/3Cvwex1V3rPSVn4) for instructions on how to connect to this server. Once connected, you will find a `groupX/submissions/assignmentY` folder in your home directory, with `X` being your [group ID](https://owncloud.tuwien.ac.at/index.php/s/fu7q9EMmwMu3DMg) and `Y` being the assignment ID. To submit assignment `Y`, simply copy your submission into this folder. The folder is shared between all members of group `X`, so submission is required only once per group.
+Assignments are submitted via our Deep Learning server. See [this text](https://github.com/cpra/dlvc2016/blob/master/assignments/server.md) for instructions on how to connect to this server. Once connected, you will find a `groupX/submissions/assignmentY` folder in your home directory, with `X` being your [group ID](https://github.com/cpra/dlvc2016/blob/master/assignments/groups.md) and `Y` being the assignment ID. To submit assignment `Y`, simply copy your submission into this folder. The folder is shared between all members of group `X`, so submission is required only once per group.
 
 The submission deadlines are stated in the individual assignments. These deadlines are hard: you will no longer be able to change a submission folder after the deadline has passed. So please don't start uploading your submission five minutes before the deadline.
 
