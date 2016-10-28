@@ -1,0 +1,31 @@
+#!/bin/bash
+
+# create directories
+
+mkdir -p lectures
+mkdir -p assignments
+mkdir -p assignments/assignment1
+mkdir -p assignments/assignment2
+
+# copy lecture slides
+
+cp "../lectures/lecture1/slides/slides.pdf" "lectures/lecture1.pdf"
+cp "../lectures/lecture2/slides/slides.pdf" "lectures/lecture2.pdf"
+cp "../lectures/lecture3/slides/slides.pdf" "lectures/lecture3.pdf"
+cp "../lectures/lecture4/slides/slides.pdf" "lectures/lecture4.pdf"
+
+# copy general assignment information
+
+cp "../assignments/general.md" "assignments/"
+cp "../assignments/server.md" "assignments/"
+cp "../assignments/groups.md" "assignments/"
+
+# copy assignment 1 information
+
+cp "../assignments/assignment1/specification/part1.md" "assignments/assignment1/"
+cp "../assignments/assignment1/specification/part2.md" "assignments/assignment1/"
+cp "../assignments/assignment1/specification/part3.md" "assignments/assignment1/"
+
+# copy assignment 2 information
+
+cp "../assignments/assignment2/specification/part1.md" "assignments/assignment2/"
