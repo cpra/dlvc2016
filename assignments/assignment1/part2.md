@@ -73,7 +73,7 @@ Create a script `test_image_vectorizer.py` that tests the `ImageVectorizer` clas
 
 -----
 
-Implement a kNN classifier that supports the L1 and L2 distance measures, as discussed in the lecture. You are **not** allowed to use available implementations. The implementation should be simple, based on an exhaustive search for neighbors of a given sample (as covered in the lecture).
+Implement a kNN classifier that supports the L1 and L2 distance measures, as discussed in the lecture. You are **not** allowed to use available implementations. The implementation should be simple, based on an exhaustive search for neighbors of a given sample (as covered in the lecture). Make sure to convert the vectors to `float` before computing distances in order to avoid underflow errors.
 
 ```python
 class KnnClassifier:
