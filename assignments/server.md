@@ -17,7 +17,7 @@ The password for logging in was sent to you via email. If you have not received 
 
 After logging in, you are inside your home directory. This is your private space, only you can access this directory. Inside your directory there is a `groupX/` folder, with `X` being your [group ID](https://github.com/cpra/dlvc2016/blob/master/assignments/groups.md). If you are in a group of two, you can use this folder to share data with your colleague. The main purpose of this directory is for handing in assignments. See the [general information](https://github.com/cpra/dlvc2016/blob/master/assignments/general.md) for details. Do not delete the `groupX/` directory or the `submissions/` subdirectory.
 
-You can upload and download data using `scp` or an SFTP GUI like [filezilla](https://filezilla-project.org/). Please do not upload datasets. All datasets required are available inside the `datasets/` folder. See the Dataset section.
+You can upload and download data using `scp` or an SFTP GUI like [filezilla](https://filezilla-project.org/). Please do not upload datasets. All datasets required are available inside the `datasets/` folder. See the Datasets section.
 
 ## Deep Learning Libraries ##
 
@@ -40,8 +40,6 @@ All datasets you need in the assignments are available inside the `datasets/` di
 The server is quite powerful, it has 40 logical CPU cores, 256 GB RAM, and 4 powerful GPUs (two [GeForce TITAN X](http://www.geforce.com/hardware/desktop-gpus/geforce-gtx-titan-x) and two [GeForce GTX 1080](http://www.geforce.com/hardware/10series/geforce-gtx-1080)). Despite this, task scheduling is required because training a CNN typically results in full utilization of a single GPU. This means that at most four processes that require GPU resources should run in parallel and on different GPUs. The task scheduler ensures this.
 
 ### Submitting Jobs ###
-
-> The `getFreeGPU` does currently not work with the scheduler, causing an error. This will be fixed in the future. Until then, you can select a free GPU yourself by executing `nvidia-smi` and using the GPU (IDs 0 to 3) with the lowest utilization. Then specify the GPU manually, e.g. `export CUDA_VISIBLE_DEVICES=1`. This obviously does not work if your job is queued for some time (which is the very reason why `getFreeGPU` exists) but will be sufficient for Assignment 2 - Part 1. Please do not run jobs that take long until this problem is fixed.
 
 To schedule a job that requires access to the GPU, create a bash script that includes the corresponding commands. The first lines should always be as follows:
 
