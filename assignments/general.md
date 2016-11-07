@@ -74,6 +74,15 @@ Assignments are submitted via our Deep Learning server. See [this text](https://
 
 The submission deadlines are stated in the individual assignments. These deadlines are hard: you will no longer be able to change a submission folder after the deadline has passed. So please don't start uploading your submission five minutes before the deadline.
 
+In case you miss the submission deadline, you can submit later via email to dlvc@caa.tuwien.ac.at. The following point reductions apply:
+
+* Until 24h after deadline: -25%
+* Until 48h after deadline: -50%
+* Until 72h after deadline: -75%
+* Afterwards: -100%
+
+**You have to submit every assignment within one week after the deadline. If you don't, you will fail the course.**
+
 ## Plagiarism ##
 
 Do not copy code from other students or the web. If we find out that you do, you will get 0 points.
