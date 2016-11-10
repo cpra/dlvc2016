@@ -29,3 +29,4 @@ cp "../assignments/assignment1/specification/part3.md" "assignments/assignment1/
 # copy assignment 2 information
 
 cp "../assignments/assignment2/specification/part1.md" "assignments/assignment2/"
+cp "../assignments/assignment2/specification/part2.md" "assignments/assignment2/"
