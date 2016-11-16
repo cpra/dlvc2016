@@ -259,7 +259,9 @@ The script should perform the following steps:
 4. Setup a softmax classifier and optimization (SGD with standard or Nesterov momentum) using your chosen Deep Learning library. Find a learning rate that works well (momentum can be fixed to 0.9).
 5. Train for 200 epochs. After every epoch, print the average loss, training accuracy, and validation accuracy over all minibatches.
 
-You must implement minibatch training and validation yourself. Every library has functionality for training and prediction (and, in some cases, testing) on a minibatch for this purpose. For instance, Keras has `model.train_on_batch()` for training. The overall structure of the training and validation step will look as follows:
+You must implement minibatch training and validation yourself. Every library has functionality for training and prediction (and, in some cases, testing) on a minibatch for this purpose. For instance, Keras has `model.train_on_batch()` for training. Note that some libraries expect ground-truth labels in one-hot encoding. Keras has a `to_categorical()` function for obtaining one-hot vectors from scalar labels.
+
+The overall structure of the training and validation step will look as follows:
 
     for each of 200 epochs:
         for each minibatch in training set:
