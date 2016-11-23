@@ -27,6 +27,7 @@ cp "../assignments/groups.md" "assignments/"
 cp "../assignments/assignment1/specification/part1.md" "assignments/assignment1/"
 cp "../assignments/assignment1/specification/part2.md" "assignments/assignment1/"
 cp "../assignments/assignment1/specification/part3.md" "assignments/assignment1/"
+cp "../assignments/assignment1/submissions/recap/slides.pdf" "assignments/assignment1/recap.pdf"
 
 # copy assignment 2 information
 
