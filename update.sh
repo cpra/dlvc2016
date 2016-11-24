@@ -35,3 +35,5 @@ cp "../assignments/assignment1/submissions/recap/slides.pdf" "assignments/assign
 cp "../assignments/assignment2/specification/part1.md" "assignments/assignment2/"
 cp "../assignments/assignment2/specification/part2.md" "assignments/assignment2/"
 cp "../assignments/assignment2/specification/part3.md" "assignments/assignment2/"
+cp "../assignments/assignment2/specification/part4.md" "assignments/assignment2/"
+cp "../assignments/assignment2/specification/cat.jpg" "assignments/assignment2/"
