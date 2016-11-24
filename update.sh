@@ -15,6 +15,7 @@ cp "../lectures/lecture3/slides/slides.pdf" "lectures/lecture3.pdf"
 cp "../lectures/lecture4/slides/slides.pdf" "lectures/lecture4.pdf"
 cp "../lectures/lecture5/slides/slides.pdf" "lectures/lecture5.pdf"
 cp "../lectures/lecture6/slides/slides.pdf" "lectures/lecture6.pdf"
+cp "../lectures/lecture7/slides/slides.pdf" "lectures/lecture7.pdf"
 
 # copy general assignment information
 
