@@ -85,7 +85,7 @@ Update the `test_sample_transformations.py` from Part 2 to test the above transf
     Computing PerChannelDivisionImageTransformation from TinyCifar10Dataset [train] stddev
      Values: 63.09, 62.39, 67.02
     After applying sequence FloatCast -> PerChannelSubtractionImageTransformation -> PerChannelDivisionImageTransformation: shape: (32, 32, 3), data type: float32, mean: -0.3, min: -2.0, max: 2.1
-cbb
+
 -----
 
 Time for deep learning. Copy `softmax_classify_hog_tinycifar10.py` from Part 3 to `cnn_classify_cifar10.py`. Change the datasets to `Cifar10Dataset` (**not** the tiny version). Replace `SubtractionTransformation` and `DivisionTransformation` with the per-channels versions from above. Finally, replace the softmax classifier with a CNN with the following architecture:
@@ -134,24 +134,24 @@ Train the CNN for at most 100 epochs using a global weight decay of 0.0001, a le
      [val]   10000 samples, 100 minibatches of size 100
     Initializing CNN and optimizer ...
     Training for 100 epochs ...
-    ...
-    [Epoch 061] loss: 0.579, training accuracy: 0.809, validation accuracy: 0.681
-     New best validation accuracy, saving model to "model_best.h5"
-    [Epoch 062] loss: 0.575, training accuracy: 0.810, validation accuracy: 0.680
-    [Epoch 063] loss: 0.571, training accuracy: 0.811, validation accuracy: 0.681
-    [Epoch 064] loss: 0.567, training accuracy: 0.812, validation accuracy: 0.681
-    [Epoch 065] loss: 0.563, training accuracy: 0.814, validation accuracy: 0.680
-    [Epoch 066] loss: 0.559, training accuracy: 0.815, validation accuracy: 0.680
-    [Epoch 067] loss: 0.555, training accuracy: 0.816, validation accuracy: 0.680
-    [Epoch 068] loss: 0.552, training accuracy: 0.817, validation accuracy: 0.681
-    [Epoch 069] loss: 0.548, training accuracy: 0.819, validation accuracy: 0.681
-    [Epoch 070] loss: 0.544, training accuracy: 0.821, validation accuracy: 0.681
-    [Epoch 071] loss: 0.541, training accuracy: 0.823, validation accuracy: 0.679
-    [Epoch 072] loss: 0.538, training accuracy: 0.823, validation accuracy: 0.680
-     Validation accuracy did not improve for 10 epochs, stopping
+     ...
+     [Epoch 061] loss: 0.579, training accuracy: 0.809, validation accuracy: 0.681
+      New best validation accuracy, saving model to "model_best.h5"
+     [Epoch 062] loss: 0.575, training accuracy: 0.810, validation accuracy: 0.680
+     [Epoch 063] loss: 0.571, training accuracy: 0.811, validation accuracy: 0.681
+     [Epoch 064] loss: 0.567, training accuracy: 0.812, validation accuracy: 0.681
+     [Epoch 065] loss: 0.563, training accuracy: 0.814, validation accuracy: 0.680
+     [Epoch 066] loss: 0.559, training accuracy: 0.815, validation accuracy: 0.680
+     [Epoch 067] loss: 0.555, training accuracy: 0.816, validation accuracy: 0.680
+     [Epoch 068] loss: 0.552, training accuracy: 0.817, validation accuracy: 0.681
+     [Epoch 069] loss: 0.548, training accuracy: 0.819, validation accuracy: 0.681
+     [Epoch 070] loss: 0.544, training accuracy: 0.821, validation accuracy: 0.681
+     [Epoch 071] loss: 0.541, training accuracy: 0.823, validation accuracy: 0.679
+     [Epoch 072] loss: 0.538, training accuracy: 0.823, validation accuracy: 0.680
+      Validation accuracy did not improve for 10 epochs, stopping
     Testing best model on test set ...
-    [test]   10000 samples, 100 minibatches of size 100
-    Accuracy: 67.6%
+     [test]   10000 samples, 100 minibatches of size 100
+     Accuracy: 67.6%
 
 You should reach a test accuracy of about 67%, as shown above. The exact score will vary depending on the initial weights, which are chosen randomly. For comparison, a multilayer perceptron with tuned hyperparameters trained on HOG features of CIFAR10 achieves an accuracy of about 60%. The CNN clearly performs better, but still not as good as we'd like. We'll improve the results in Assignment 3.
 
