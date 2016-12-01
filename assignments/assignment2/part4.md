@@ -81,13 +81,11 @@ Update the `test_sample_transformations.py` from Part 2 to test the above transf
 
     ...
     Computing PerChannelSubtractionImageTransformation from TinyCifar10Dataset [train] mean
-     Values: 124.66, 122.35, 121.49
+     Values: 125.26, 122.61, 113.27
     Computing PerChannelDivisionImageTransformation from TinyCifar10Dataset [train] stddev
-     Values: 67.48, 66.20, 65.64
-    After applying sequence FloatCast -> PerChannelSubtractionImageTransformation -> PerChannelDivisionImageTransformation: shape: (32, 32, 3), data type: float32, mean: -0.3, min: -1.9, max: 2.0
-
-We see that, in case of `TinyCifar10Dataset`, the per-channel statistics are quite similar.
-
+     Values: 63.09, 62.39, 67.02
+    After applying sequence FloatCast -> PerChannelSubtractionImageTransformation -> PerChannelDivisionImageTransformation: shape: (32, 32, 3), data type: float32, mean: -0.3, min: -2.0, max: 2.1
+cbb
 -----
 
 Time for deep learning. Copy `softmax_classify_hog_tinycifar10.py` from Part 3 to `cnn_classify_cifar10.py`. Change the datasets to `Cifar10Dataset` (**not** the tiny version). Replace `SubtractionTransformation` and `DivisionTransformation` with the per-channels versions from above. Finally, replace the softmax classifier with a CNN with the following architecture:
@@ -129,33 +127,33 @@ Train the CNN for at most 100 epochs using a global weight decay of 0.0001, a le
     Loading Cifar10Dataset ...
     Setting up preprocessing ...
      Adding FloatCastTransformation
-     Adding PerChannelSubtractionImageTransformation [train] (values: [ 124.7004776   122.28782654  121.54527283])
-     Adding PerChannelDivisionImageTransformation [train] (values: [ 67.5210495   66.09591675  65.43208313])
+     Adding PerChannelSubtractionImageTransformation [train] (values: [ 125.30856323  122.91088867  113.80110931])
+     Adding PerChannelDivisionImageTransformation [train] (values: [ 63.04611206  62.15937424  66.74285889])
     Initializing minibatch generators ...
      [train] 40000 samples, 625 minibatches of size 64
      [val]   10000 samples, 100 minibatches of size 100
     Initializing CNN and optimizer ...
     Training for 100 epochs ...
     ...
-     [Epoch 074] loss: 0.513, training accuracy: 0.834, validation accuracy: 0.675
-      New best validation accuracy, saving model to "model_best.h5"
-     [Epoch 075] loss: 0.509, training accuracy: 0.836, validation accuracy: 0.674
-     [Epoch 076] loss: 0.506, training accuracy: 0.837, validation accuracy: 0.674
-     [Epoch 077] loss: 0.503, training accuracy: 0.837, validation accuracy: 0.674
-     [Epoch 078] loss: 0.500, training accuracy: 0.838, validation accuracy: 0.672
-     [Epoch 079] loss: 0.497, training accuracy: 0.839, validation accuracy: 0.673
-     [Epoch 080] loss: 0.494, training accuracy: 0.841, validation accuracy: 0.672
-     [Epoch 081] loss: 0.491, training accuracy: 0.842, validation accuracy: 0.674
-     [Epoch 082] loss: 0.488, training accuracy: 0.843, validation accuracy: 0.673
-     [Epoch 083] loss: 0.485, training accuracy: 0.844, validation accuracy: 0.671
-     [Epoch 084] loss: 0.483, training accuracy: 0.845, validation accuracy: 0.671
-     [Epoch 085] loss: 0.480, training accuracy: 0.846, validation accuracy: 0.670
-      Validation accuracy did not improve for 10 epochs, stopping
+    [Epoch 061] loss: 0.579, training accuracy: 0.809, validation accuracy: 0.681
+     New best validation accuracy, saving model to "model_best.h5"
+    [Epoch 062] loss: 0.575, training accuracy: 0.810, validation accuracy: 0.680
+    [Epoch 063] loss: 0.571, training accuracy: 0.811, validation accuracy: 0.681
+    [Epoch 064] loss: 0.567, training accuracy: 0.812, validation accuracy: 0.681
+    [Epoch 065] loss: 0.563, training accuracy: 0.814, validation accuracy: 0.680
+    [Epoch 066] loss: 0.559, training accuracy: 0.815, validation accuracy: 0.680
+    [Epoch 067] loss: 0.555, training accuracy: 0.816, validation accuracy: 0.680
+    [Epoch 068] loss: 0.552, training accuracy: 0.817, validation accuracy: 0.681
+    [Epoch 069] loss: 0.548, training accuracy: 0.819, validation accuracy: 0.681
+    [Epoch 070] loss: 0.544, training accuracy: 0.821, validation accuracy: 0.681
+    [Epoch 071] loss: 0.541, training accuracy: 0.823, validation accuracy: 0.679
+    [Epoch 072] loss: 0.538, training accuracy: 0.823, validation accuracy: 0.680
+     Validation accuracy did not improve for 10 epochs, stopping
     Testing best model on test set ...
-     [test]   10000 samples, 100 minibatches of size 100
-     Accuracy: 67.1%
+    [test]   10000 samples, 100 minibatches of size 100
+    Accuracy: 67.6%
 
-You should reach a validation accuracy of about 67%, as shown above. The exact score will vary depending on the initial weights, which are chosen randomly. For comparison, a multilayer perceptron with tuned hyperparameters trained on HOG features of CIFAR10 achieves an accuracy of about 60%. The CNN clearly performs better, but still not as good as we'd like. We'll improve the results in Assignment 3.
+You should reach a test accuracy of about 67%, as shown above. The exact score will vary depending on the initial weights, which are chosen randomly. For comparison, a multilayer perceptron with tuned hyperparameters trained on HOG features of CIFAR10 achieves an accuracy of about 60%. The CNN clearly performs better, but still not as good as we'd like. We'll improve the results in Assignment 3.
 
 -----
 
@@ -191,12 +189,12 @@ class ResizeImageTransformation(SampleTransformation):
 
 Test the script with own samples as well as [this](https://github.com/cpra/dlvc2016/blob/master/assignments/assignment2/cat.jpg) example image, in which case the script output should be as follows (the per-class probabilities and predicted class might differ):
 
-    $ python cnn_classify_image.py --model model_best.h5 --image ../specification/cat.jpg --means 124.7,122.29,121.55 --stds 67.52,66.1,65.43
+    $ python cnn_classify_image.py --model model_best.h5 --image ../specification/cat.jpg --means 125.31,122.91,113.80 --stds 63.05,62.16,66.74
     Parsing arguments ...
      Model: model_best.h5
      Image: ../specification/cat.jpg
-     Means: [124.7, 122.29, 121.55]
-     Stds: [67.52, 66.1, 65.43]
+     Means: [125.31, 122.91, 113.8]
+     Stds: [63.05, 62.16, 66.74]
     Loading image ...
      Shape: (78, 78, 3)
     Loading classifier ...
@@ -205,15 +203,15 @@ Test the script with own samples as well as [this](https://github.com/cpra/dlvc2
      Transformations in order:
       ResizeImageTransformation
       FloatCastTransformation
-      PerChannelSubtractionImageTransformation ([ 124.7   122.29  121.55])
-      PerChannelDivisionImageTransformation ([ 67.52  66.1   65.43])
-     Result: shape: (32, 32, 3), dtype: float32, mean: -1.844, std: 0.006
+      PerChannelSubtractionImageTransformation ([ 125.31  122.91  113.8 ])
+      PerChannelDivisionImageTransformation ([ 63.05  62.16  66.74])
+     Result: shape: (32, 32, 3), dtype: float32, mean: -1.882, std: 0.131
     Classifying image ...
-     Class scores: [0.03, 0.00, 0.07, 0.49, 0.33, 0.05, 0.02, 0.01, 0.00, 0.00]
-     ID of most likely class: 3 (score: 0.49)
+     Class scores: [0.02, 0.00, 0.01, 0.86, 0.01, 0.04, 0.00, 0.00, 0.06, 0.00]
+     ID of most likely class: 3 (score: 0.86)
 
 
-In the example output, the image is correctly assigned ID 3 (cat), although with a rather low confidence.
+In the example output, the image is correctly assigned ID 3 (cat).
 
 -----
 
