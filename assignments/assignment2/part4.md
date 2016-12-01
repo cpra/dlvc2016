@@ -228,4 +228,4 @@ The report should be 3 to 5 pages long.
 
 -----
 
-[Submit](https://github.com/cpra/dlvc2016/blob/master/assignments/general.md) Assignment 2, including all four parts. The **deadline is Thu, 8.12., 23:00**.
+[Submit](https://github.com/cpra/dlvc2016/blob/master/assignments/general.md) Assignment 2, including all four parts. The **deadline is Sun, 11.12., 23:00**.
