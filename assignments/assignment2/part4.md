@@ -187,6 +187,8 @@ class ResizeImageTransformation(SampleTransformation):
         # Throws an error if min(rows,cols) < size.
 ```
 
+You don't have to implement the actual resizing algorithm yourself, use e.g. scikit-learn's [resize](http://scikit-image.org/docs/dev/api/skimage.transform.html#skimage.transform.resize) function.
+
 Test the script with own samples as well as [this](https://github.com/cpra/dlvc2016/blob/master/assignments/assignment2/cat.jpg) example image, in which case the script output should be as follows (the per-class probabilities and predicted class might differ):
 
     $ python cnn_classify_image.py --model model_best.h5 --image ../specification/cat.jpg --means 125.31,122.91,113.80 --stds 63.05,62.16,66.74
