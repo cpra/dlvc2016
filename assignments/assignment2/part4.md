@@ -187,33 +187,33 @@ class ResizeImageTransformation(SampleTransformation):
         # Throws an error if min(rows,cols) < size.
 ```
 
-You don't have to implement the actual resizing algorithm yourself, use e.g. scikit-learn's [resize](http://scikit-image.org/docs/dev/api/skimage.transform.html#skimage.transform.resize) function.
+You don't have to implement the actual resizing algorithm yourself, use e.g. scikit-learn's [resize](http://scikit-image.org/docs/dev/api/skimage.transform.html#skimage.transform.resize) function **with `preserve_range=True`**.
 
 Test the script with own samples as well as [this](https://github.com/cpra/dlvc2016/blob/master/assignments/assignment2/cat.jpg) example image, in which case the script output should be as follows (the per-class probabilities and predicted class might differ):
 
     $ python cnn_classify_image.py --model model_best.h5 --image ../specification/cat.jpg --means 125.31,122.91,113.80 --stds 63.05,62.16,66.74
-    Parsing arguments ...
-     Model: model_best.h5
-     Image: ../specification/cat.jpg
-     Means: [125.31, 122.91, 113.8]
-     Stds: [63.05, 62.16, 66.74]
-    Loading image ...
-     Shape: (78, 78, 3)
-    Loading classifier ...
-     Input shape: (32, 32, 3), 10 classes
-    Preprocessing image ...
-     Transformations in order:
-      ResizeImageTransformation
-      FloatCastTransformation
-      PerChannelSubtractionImageTransformation ([ 125.31  122.91  113.8 ])
-      PerChannelDivisionImageTransformation ([ 63.05  62.16  66.74])
-     Result: shape: (32, 32, 3), dtype: float32, mean: -1.882, std: 0.131
-    Classifying image ...
-     Class scores: [0.02, 0.00, 0.01, 0.86, 0.01, 0.04, 0.00, 0.00, 0.06, 0.00]
-     ID of most likely class: 3 (score: 0.86)
+	Parsing arguments ...
+	 Model: model_best.h5
+	 Image: ../specification/cat.jpg
+	 Means: [125.31, 122.91, 113.8]
+	 Stds: [63.05, 62.16, 66.74]
+	Loading image ...
+	 Shape: (78, 78, 3)
+	Loading classifier ...
+	 Input shape: (32, 32, 3), 10 classes
+	Preprocessing image ...
+	 Transformations in order:
+	  ResizeImageTransformation
+	  FloatCastTransformation
+	  PerChannelSubtractionImageTransformation ([ 125.31  122.91  113.8 ])
+	  PerChannelDivisionImageTransformation ([ 63.05  62.16  66.74])
+	 Result: shape: (32, 32, 3), dtype: float32, mean: 0.026, std: 1.102
+	Classifying image ...
+	1/1 [==============================] - 0s
+	 Class scores: [0.00, 0.00, 0.00, 0.02, 0.00, 0.01, 0.96, 0.00, 0.00, 0.00]
+	 ID of most likely class: 6 (score: 0.96)
 
-
-In the example output, the image is correctly assigned ID 3 (cat).
+In the example output, the image is erroneously assigned ID 6.
 
 -----
 
