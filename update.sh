@@ -45,3 +45,7 @@ cp "../assignments/assignment2/specification/cat.jpg" "assignments/assignment2/"
 
 cp "../assignments/assignment3/specification/spec.md" "assignments/assignment3/"
 cp "../assignments/assignment3/leaderboard.md" "assignments/assignment3/"
+
+# copy exam questions
+
+cp "../exam-questions/questions.pdf" "exam-questions.pdf"
