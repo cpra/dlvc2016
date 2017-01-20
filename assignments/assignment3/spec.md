@@ -77,8 +77,8 @@ Remember that the purpose of the test set is for a final performance evaluation.
 
 -----
 
-The current leaderboard is [here](https://github.com/cpra/dlvc2016/tree/master/assignments/assignment3/leaderboard.md). If you want to know how well you are doing before the deadline, write me a mail with your group ID and the path to the model you want tested. I'll use this model and your `test_best_model.py` (both must be in your group's submission directory) to compute the accuracy on the private test set and update the leaderboard. As I have to do this manually, you can request this evaluation only three times before the deadline. Note that it might take a day or two until you have the result.
+The current leaderboard is [here](https://github.com/cpra/dlvc2016/tree/master/assignments/assignment3/leaderboard.md). If you want to know how well you are doing before the deadline, write me a mail with your group ID and the path to the model you want tested. I'll use this model and your `test_best_model.py` (both must be in your group's submission directory) to compute the accuracy on the private test set and update the leaderboard. Make sure your code runs on the server before sending me a request. As I have to do the evalaution manually, you can request it only three times before the deadline. Note that it might take a day or two until you have the result.
 
 -----
 
-[Submit](https://github.com/cpra/dlvc2016/blob/master/assignments/general.md) Assignment 3 including the report. The deadline is Thu, 26.01., 23:00.
+[Submit](https://github.com/cpra/dlvc2016/blob/master/assignments/general.md) Assignment 3 including the report. The deadline is Tue, 31.01., 23:00.
